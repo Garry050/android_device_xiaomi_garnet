@@ -6,6 +6,7 @@ ro.vendor.qti.va_aosp.support=1
 
 # Radio
 DEVICE_PROVISIONED=1
+persist.rcs.supported=1
 ril.subscription.types=NV,RUIM
 ro.telephony.default_network=33,33
 telephony.lteOnCdmaDevice=1
