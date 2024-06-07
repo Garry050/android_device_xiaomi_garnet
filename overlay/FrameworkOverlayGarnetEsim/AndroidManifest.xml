@@ -8,5 +8,5 @@
                    android:isStatic="true"
                    android:priority="1000"
                    android:requiredSystemPropertyName="ro.boot.product.hardware.sku"
-                   android:requiredSystemPropertyValue="GL"/>
+                   android:requiredSystemPropertyValue="JP"/>
 </manifest>

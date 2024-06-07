@@ -355,7 +355,7 @@ PRODUCT_PACKAGES += \
     libchrome.vendor \
     nqnfcinfo
 
-$(foreach sku, CN GL, \
+$(foreach sku, CN GL JP, \
     $(eval PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_$(sku)/android.hardware.nfc.ese.xml \
         frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_$(sku)/android.hardware.nfc.hce.xml \
@@ -381,12 +381,14 @@ PRODUCT_PACKAGES += \
     SettingsProviderOverlayGarnetPoco \
     SettingsProviderOverlayGarnetRedmi \
     SettingsProviderOverlayGarnetRedmiCN \
+    SettingsProviderOverlayGarnetRedmiJP \
     SystemUIOverlayGarnet \
     TelephonyOverlayGarnet \
     WifiOverlayGarnet \
     WifiOverlayGarnetPoco \
     WifiOverlayGarnetRedmi \
-    WifiOverlayGarnetRedmiCN
+    WifiOverlayGarnetRedmiCN \
+    WifiOverlayGarnetRedmiJP
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \

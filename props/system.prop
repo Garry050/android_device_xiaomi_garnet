@@ -34,3 +34,7 @@ ro.config.dha_th_rate=2.3
 ro.config.sdha_apps_bg_max=64
 ro.config.sdha_apps_bg_min=8
 
+# KDI Specific clientidbase
+ro.com.google.clientidbase.ms=android-kddi-jp-rvc3
+ro.com.google.clientidbase.vs=android-kddi-jp-rvc3
+ro.com.google.clientidbase.am=android-kddi-jp
