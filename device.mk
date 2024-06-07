@@ -374,6 +374,7 @@ PRODUCT_PACKAGES += \
     DialerOverlayGarnet \
     FrameworkOverlayGarnet \
     FrameworkOverlayGarnetEsim \
+    FrameworkOverlayGarnetEsimJP \
     LineageSDKOverlayGarnet \
     LineageSettingsOverlayGarnet \
     LineageSystemUIOverlayGarnet \
