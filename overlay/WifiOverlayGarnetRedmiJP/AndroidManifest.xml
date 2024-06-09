@@ -12,7 +12,5 @@
       android:targetPackage="com.android.wifi.resources"
       android:targetName="WifiCustomization"
       android:isStatic="true"
-      android:requiredSystemPropertyName="ro.boot.hwc"
-      android:requiredSystemPropertyValue="JP"
       android:priority="851"/>
 </manifest>

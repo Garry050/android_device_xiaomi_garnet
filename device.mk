@@ -373,22 +373,15 @@ PRODUCT_PACKAGES += \
     CarrierConfigOverlayGarnet \
     DialerOverlayGarnet \
     FrameworkOverlayGarnet \
-    FrameworkOverlayGarnetEsim \
     FrameworkOverlayGarnetEsimJP \
     LineageSDKOverlayGarnet \
     LineageSettingsOverlayGarnet \
     LineageSystemUIOverlayGarnet \
     SettingsOverlayGarnet \
-    SettingsProviderOverlayGarnetPoco \
-    SettingsProviderOverlayGarnetRedmi \
-    SettingsProviderOverlayGarnetRedmiCN \
     SettingsProviderOverlayGarnetRedmiJP \
     SystemUIOverlayGarnet \
     TelephonyOverlayGarnet \
     WifiOverlayGarnet \
-    WifiOverlayGarnetPoco \
-    WifiOverlayGarnetRedmi \
-    WifiOverlayGarnetRedmiCN \
     WifiOverlayGarnetRedmiJP
 
 # Overlay
@@ -479,7 +472,7 @@ PRODUCT_BOOT_JARS += \
     telephony-ext
 
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_GL/android.hardware.telephony.euicc.xml
+    frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_JP/android.hardware.telephony.euicc.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \

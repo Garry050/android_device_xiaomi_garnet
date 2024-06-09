@@ -18,6 +18,9 @@ $(call inherit-product, device/xiaomi/garnet/device.mk)
 # MiuiCamera
 $(call inherit-product-if-exists, vendor/xiaomi/garnet-miuicamera/products/miuicamera.mk)
 
+# GApps
+$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+
 # Crdroid stuff
 TARGET_BOOT_ANIMATION_RES := 1080
 

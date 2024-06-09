@@ -6,7 +6,5 @@
     package="android.overlay.garnet.esimjp">
     <overlay android:targetPackage="android"
                    android:isStatic="true"
-                   android:priority="1000"
-                   android:requiredSystemPropertyName="ro.boot.product.hardware.sku"
-                   android:requiredSystemPropertyValue="JP"/>
+                   android:priority="1000" />
 </manifest>
