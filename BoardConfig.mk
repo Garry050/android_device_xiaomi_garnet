@@ -17,7 +17,6 @@ AB_OTA_PARTITIONS := \
     dtbo \
     odm \
     product \
-    recovery \
     system \
     system_ext \
     vbmeta \
@@ -58,7 +57,7 @@ TARGET_BOOTLOADER_BOARD_NAME := parrot
 TARGET_NO_BOOTLOADER := true
 
 # Display
-TARGET_SCREEN_DENSITY := 540
+TARGET_SCREEN_DENSITY ?= 470
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
@@ -105,8 +104,8 @@ BOARD_USES_GENERIC_KERNEL_IMAGE := true
 BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
     disable_dma32=on \
-    bootinfo.fingerprint=$(LINEAGE_VERSION) \
-    swinfo.fingerprint=$(LINEAGE_VERSION)
+    bootinfo.fingerprint=$(INFINITY_VERSION) \
+    swinfo.fingerprint=$(INFINITY_VERSION)
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
@@ -114,18 +113,18 @@ BOARD_BOOTCONFIG := \
     androidboot.usbcontroller=a600000.dwc3
 
 # Kernel (prebuilt)
-PREBUILT_PATH := device/xiaomi/garnet-prebuilt
-BOARD_PREBUILT_DTBIMAGE_DIR := $(PREBUILT_PATH)/images/dtbs/
-BOARD_PREBUILT_DTBOIMAGE := $(PREBUILT_PATH)/images/dtbo.img
+KERNEL_PATH := $(DEVICE_PATH)-kernel
+BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/images/dtbs/
+BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/images/dtbo.img
 
 TARGET_NO_KERNEL_OVERRIDE := true
-TARGET_KERNEL_SOURCE := $(PREBUILT_PATH)/kernel-headers
+TARGET_KERNEL_SOURCE := $(KERNEL_PATH)/kernel-headers
 PRODUCT_COPY_FILES += \
-	$(PREBUILT_PATH)/images/kernel:kernel
+	$(KERNEL_PATH)/images/kernel:kernel
 
 # Kernel modules
-DLKM_MODULES_PATH := $(PREBUILT_PATH)/modules/dlkm
-RAMDISK_MODULES_PATH := $(PREBUILT_PATH)/modules/ramdisk
+DLKM_MODULES_PATH := $(KERNEL_PATH)/modules/dlkm
+RAMDISK_MODULES_PATH := $(KERNEL_PATH)/modules/ramdisk
 
 BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DLKM_MODULES_PATH)/*.ko)
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(patsubst %,$(DLKM_MODULES_PATH)/%,$(shell cat $(DLKM_MODULES_PATH)/modules.load))
@@ -138,6 +137,9 @@ BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(RAMDISK_MODULES_PATH)/mo
 
 # Lineage Health
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
+
+# MiuiCamera
+-include vendor/xiaomi/garnet-miuicamera/products/board.mk
 
 # Partitions
 -include vendor/lineage/config/BoardConfigReservedSize.mk
@@ -220,8 +222,9 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 
 # Vibrator
-TARGET_QTI_VIBRATOR_EFFECT_LIB := libqtivibratoreffect.xiaomi
-TARGET_QTI_VIBRATOR_USE_EFFECT_STREAM := true
+SOONG_CONFIG_NAMESPACES += XIAOMI_VIBRATOR
+SOONG_CONFIG_XIAOMI_VIBRATOR := USE_EFFECT_STREAM
+SOONG_CONFIG_XIAOMI_VIBRATOR_USE_EFFECT_STREAM := true
 
 # WiFi
 BOARD_WLAN_DEVICE := qcwcn
