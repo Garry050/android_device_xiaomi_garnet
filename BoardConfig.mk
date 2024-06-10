@@ -14,6 +14,7 @@ BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
     boot \
+    recovery \
     dtbo \
     odm \
     product \

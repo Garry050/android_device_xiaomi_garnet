@@ -1,4 +1,5 @@
 # Radio
+ro.telephony.sim_slots.count=2
 telephony.active_modems.max_count=2
 
 # Legit Touch Hax
