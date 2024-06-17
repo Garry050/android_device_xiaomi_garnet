@@ -1483,6 +1483,15 @@ vendor/lib64/vendor.qti.esepowermanager@1.1.so
 my_bigball/etc/permissions/EuiccGoogle_grant_permissions_list.xml:product/etc/permissions/privapp-permissions-euiccgoogle.xml|58ddaa5bbff62eefd2d5c39900b7b29fd177def1
 my_bigball/priv-app/EuiccGoogle/EuiccGoogle.apk:product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED|4fb8d8ab0e1dbda1582361f48395f819367edb0a
 
+# FeliCa - KDI ROM (XIG05_jp_kdi-user 14 SKQ1.230401.001 V816.0.2.0.UNRJPKD release-keys)
+xig05/system_ext/app/MobileFeliCaClient/MobileFeliCaClient.apk:system_ext/app/MobileFeliCaClient/MobileFeliCaClient.apk;PRESIGNED
+xig05/system_ext/app/MobileFeliCaMenuMainApp/MobileFeliCaMenuMainApp.apk:system_ext/app/MobileFeliCaMenuMainApp/MobileFeliCaMenuMainApp.apk;PRESIGNED
+xig05/system_ext/app/MobileFeliCaSettingApp/MobileFeliCaSettingApp.apk:system_ext/app/MobileFeliCaSettingApp/MobileFeliCaSettingApp.apk;PRESIGNED
+xig05/system_ext/app/MobileFeliCaWebPluginBoot/MobileFeliCaWebPluginBoot.apk:system_ext/app/MobileFeliCaWebPluginBoot/MobileFeliCaWebPluginBoot.apk;PRESIGNED
+xig05/vendor/etc/felica/common.cfg:vendor/etc/felica/common.cfg
+xig05/vendor/etc/felica/mfm.cfg:vendor/etc/felica/mfm.cfg
+xig05/vendor/etc/felica/mfs.cfg:vendor/etc/felica/mfs.cfg
+
 # Fingerprint
 odm/lib/hw/fingerprint.fpc_fod.so:odm/lib/hw/fingerprint.fpc_fod.default.so
 odm/lib/hw/fingerprint.goodix_fod.so:odm/lib/hw/fingerprint.goodix_fod.default.so
