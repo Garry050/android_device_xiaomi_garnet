@@ -630,3 +630,13 @@ on property:sys.volume.stream.bluetoothsco=*
     
 # Enable suspend to RAM
     write /sys/power/mem_sleep "deep"
+
+# Init-fingerprint
+service fpcpermission /vendor/bin/init.fingerprint.sh
+    user root
+    group root
+    disabled
+
+on property:sys.boot_completed=1
+    start fpcpermission
+    

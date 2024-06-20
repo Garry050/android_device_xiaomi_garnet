@@ -52,3 +52,9 @@ prebuilt_etc {
     sub_dir: "init",
     vendor: true,
 }
+
+sh_binary {
+    name: "init.fingerprint.sh",
+    src: "bin/init.fingerprint.sh",
+    vendor: true,
+}
