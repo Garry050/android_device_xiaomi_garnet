@@ -370,7 +370,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     vendor/nxp/opensource/commonsys/packages/apps/Nfc \
     vendor/nxp/opensource/commonsys/external/libnfc-nci \
-    vendor/nxp/opensource/interfaces/nfc
+    vendor/nxp/opensource/commonsys/interfaces/nfc
 
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service \
