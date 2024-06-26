@@ -310,10 +310,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.light-V1-ndk_platform.vendor
 
-# Lineage Health
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
-
 # Media
 PRODUCT_PACKAGES += \
     libOmxCore \
@@ -368,9 +364,10 @@ PRODUCT_COPY_FILES += \
 
 # NFC
 PRODUCT_SOONG_NAMESPACES += \
-    vendor/nxp/opensource/commonsys/packages/apps/Nfc \
+    vendor/nxp/opensource/interfaces/nfc \
     vendor/nxp/opensource/commonsys/external/libnfc-nci \
-    vendor/nxp/opensource/interfaces/nfc
+    vendor/nxp/opensource/commonsys/frameworks \
+    vendor/nxp/opensource/commonsys/packages/apps/Nfc \
 
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service \
@@ -401,9 +398,8 @@ PRODUCT_PACKAGES += \
     FrameworkOverlayGarnet \
     FrameworkOverlayGarnetGLEsim \
     FrameworkOverlayGarnetJPEsim \
-    LineageSDKOverlayGarnet \
-    LineageSettingsOverlayGarnet \
-    LineageSystemUIOverlayGarnet \
+    CherishSettingsOverlayGarnet \
+    CherishSystemUIOverlayGarnet \
     NfcResGarnet \
     SettingsOverlayGarnet \
     SettingsProviderOverlayGarnetPoco \

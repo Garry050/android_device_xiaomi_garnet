@@ -5,6 +5,6 @@
 //
 
 runtime_resource_overlay {
-    name: "LineageSystemUIOverlayGarnet",
+    name: "CherishSettingsOverlayGarnet",
     system_ext_specific: true,
 }

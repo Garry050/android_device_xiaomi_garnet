@@ -3,8 +3,8 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.settings.lineage.overlay.garnet">
-    <overlay android:targetPackage="com.android.settings"
+    package="com.android.systemui.cherish.overlay.garnet">
+    <overlay android:targetPackage="com.android.systemui"
                    android:isStatic="true"
                    android:priority="1000" />
 </manifest>

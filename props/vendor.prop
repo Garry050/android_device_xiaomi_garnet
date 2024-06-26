@@ -114,6 +114,9 @@ persist.vendor.dpm.vndr.feature=1
 persist.vendor.dpm.vndr.halservice.enable=1
 persist.vendor.dpm.vndr.idletimer.mode=default
 
+# DRM
+drm.service.enabled=true
+
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
@@ -180,7 +183,7 @@ ro.vendor.nfc.debounce_field_on=1
 vendor.pasr.activemode.enabled=false
 
 # Netflix
-ro.netflix.bsp_rev=Q8450-34634-1
+ro.netflix.bsp_rev=Q6450-36256-1
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so

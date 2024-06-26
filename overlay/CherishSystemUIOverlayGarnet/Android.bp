@@ -5,6 +5,6 @@
 //
 
 runtime_resource_overlay {
-    name: "LineageSDKOverlayGarnet",
+    name: "CherishSystemUIOverlayGarnet",
     system_ext_specific: true,
 }
