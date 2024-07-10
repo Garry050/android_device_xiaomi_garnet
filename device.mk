@@ -383,19 +383,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
 
 # NFC
-PRODUCT_SOONG_NAMESPACES += \
-    vendor/nxp/opensource/commonsys/packages/apps/Nfc \
-    vendor/nxp/opensource/commonsys/external/libnfc-nci \
-    vendor/nxp/opensource/commonsys/interfaces/nfc
-
 PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.2-service \
-    com.android.nfc_extras \
-    com.nxp.nfc.nq \
+    android.hardware.nfc@1.2.vendor \
+    android.hardware.secure_element@1.2.vendor \
     libchrome.vendor \
-    NQNfcNci \
-    Tag \
-    com.nxp.nfc.nq
+    nqnfcinfo
 
 $(foreach sku, CN GL JP, \
     $(eval PRODUCT_COPY_FILES += \
@@ -487,11 +479,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
        ro.audio.spatializer_transaural_enabled_default=false \
        persist.vendor.audio.spatializer.speaker_enabled=true \
        ro.vendor.audio.feature.spatial=7
-
-# Secure Element
-PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.1.vendor \
-    android.hardware.secure_element@1.2.vendor
 
 # Sensors
 PRODUCT_PACKAGES += \
