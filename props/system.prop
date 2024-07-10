@@ -1,6 +1,15 @@
 # CNE
 persist.vendor.cne.feature=1
 
+# Bluetooth
+persist.vendor.btstack.enable.twsplus=true
+persist.vendor.btstack.enable.twsplussho=true
+
+# DroidX
+ro.droidx.maintainer=JYR_RC
+ro.droidx.chipset=Snapdragon 7s gen 2
+ro.droidx.display_resolution=6.67" AMOLED 2712x1220
+
 # QTI
 ro.vendor.qti.va_aosp.support=1
 
@@ -36,3 +45,17 @@ ro.config.sdha_apps_bg_min=8
 
 # MIUI Camera
 ro.miui.region=IN
+
+# Flicker Fix
+ro.surface_flinger.set_display_power_timer_ms=1000
+ro.surface_flinger.set_idle_timer_ms=80
+vendor.display.idle_time=0
+debug.sf.frame_rate_multiple_threshold=60
+
+# Netflix custom property
+ro.netflix.bsp_rev=Q855-16947-1
+
+# SurfaceFlinger
+ro.sf.force_hwc_brightness=1
+ro.sf.skip_set_active_mode_when_off=1
+
