@@ -52,9 +52,6 @@ ro.surface_flinger.set_idle_timer_ms=80
 vendor.display.idle_time=0
 debug.sf.frame_rate_multiple_threshold=60
 
-# Netflix custom property
-ro.netflix.bsp_rev=Q855-16947-1
-
 # SurfaceFlinger
 ro.sf.force_hwc_brightness=1
 ro.sf.skip_set_active_mode_when_off=1
