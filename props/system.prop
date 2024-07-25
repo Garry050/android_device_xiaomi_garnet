@@ -9,3 +9,6 @@ DEVICE_PROVISIONED=1
 ril.subscription.types=NV,RUIM
 ro.telephony.default_network=33,33
 telephony.lteOnCdmaDevice=1
+
+# MIUI Camera
+ro.miui.region=IN
