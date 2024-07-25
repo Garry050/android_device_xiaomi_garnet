@@ -14,13 +14,15 @@ $(call inherit-product, vendor/derp/config/common_full_phone.mk)
 # Inherit from garnet device
 $(call inherit-product, device/xiaomi/garnet/device.mk)
 
+-include vendor/lineage-priv/keys/keys.mk
+
 # Derp Stuff
 TARGET_HAS_UDFPS := true
 EXTRA_UDFPS_ANIMATIONS := true
 TARGET_SUPPORTS_QUICK_TAP := true
 
 # Derpfest
-DERP_BUILDTYPE := Official
+# DERP_BUILDTYPE := Official
 
 #GApps
 TARGET_USES_PICO_GAPPS := true
