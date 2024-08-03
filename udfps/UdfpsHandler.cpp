@@ -82,8 +82,18 @@ static disp_event_resp* parseDispEvent(int fd) {
 
 }  // anonymous namespace
 
-class XiaomiGarnetUdfpsHander : public UdfpsHandler {
+class XiaomiGarnetUdfpsHandler : public UdfpsHandler {
   public:
+
+    void preEnroll() override {
+    }
+
+    void enroll() override {
+    }
+
+    void postEnroll() override {
+    }
+
     void init(fingerprint_device_t* device) {
         mDevice = device;
         touch_fd_ = android::base::unique_fd(open(TOUCH_DEV_PATH, O_RDWR));
@@ -214,7 +224,7 @@ class XiaomiGarnetUdfpsHander : public UdfpsHandler {
 };
 
 static UdfpsHandler* create() {
-    return new XiaomiGarnetUdfpsHander();
+    return new XiaomiGarnetUdfpsHandler();
 }
 
 static void destroy(UdfpsHandler* handler) {
