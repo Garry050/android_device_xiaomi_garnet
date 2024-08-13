@@ -2,15 +2,15 @@ echo 'Starting to clone stuffs needed to build for garnet'
 
 # Vendor
 echo 'Cloning vendor tree'
-git clone https://github.com/aosp-garnet/android_vendor_xiaomi_garnet.git -b derp-14 vendor/xiaomi/garnet
+git clone https://github.com/Garry050/proprietary_vendor_xiaomi_garnet.git -b derp-14 vendor/xiaomi/garnet
 
 # Kernel
 echo 'Cloning kernel tree'
-git clone https://github.com/aosp-garnet/android_device_xiaomi_garnet-kernel.git -b lineage-21 device/xiaomi/garnet-kernel
+git clone https://github.com/Garry050/android_device_xiaomi_garnet-prebuilt.git -b lineage-21 device/xiaomi/garnet-kernel
 
 # Hardware Xiaomi
 echo 'Cloning hardware xiaomi'
-rm -rf hardware/xiaomi && git clone https://github.com/aosp-garnet/hardware_xiaomi.git -b lineage-21 hardware/xiaomi
+rm -rf hardware/xiaomi && git clone https://github.com/Garry050/android_hardware_xiaomi.git -b derp-14 hardware/xiaomi
 
 # MiuiCamera
 echo 'Cloning miuicamera tree'
